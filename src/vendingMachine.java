@@ -20,6 +20,6 @@ public static void main (String[] args) {
 		}
 		else
 			System.out.println("Your change is: " + difference);
-		
+		System.out.println("Thank you for purchasing! Come back soon!");
 	}
 }
