@@ -9,6 +9,10 @@ public static void main (String[] args) {
 		System.out.println("Our snack options are: ");
 		for(int i= 0; i<snacks.length; i++) {
 			System.out.println("A"+i+ ": " + snacks[i] + ", $" + snackPrices[i]);
+		System.out.println("What would you like?");
+		String snackSelection = Scanner.next();
+		System.out.println("Enter your money");
+		int amountOfMoney = Scanner.nextInt();
 		}
 	}
 }
