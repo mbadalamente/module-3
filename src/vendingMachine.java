@@ -8,11 +8,18 @@ public static void main (String[] args) {
 		double[] snackPrices = {0.75, 1.25, 1, 0.25, 0.50, 1};
 		System.out.println("Our snack options are: ");
 		for(int i= 0; i<snacks.length; i++) {
-			System.out.println("A"+i+ ": " + snacks[i] + ", $" + snackPrices[i]);
-		System.out.println("What would you like?");
-		String snackSelection = Scanner.next();
-		System.out.println("Enter your money");
-		int amountOfMoney = Scanner.nextInt();
+			System.out.println(i+ ": " + snacks[i] + ", $" + snackPrices[i]);
 		}
+		System.out.println("What would you like?");
+		int snackSelection = myScanner.nextInt();
+		System.out.println("How many $1 bills would you like to enter");
+		double amountOfMoney = myScanner.nextDouble();
+		double difference = amountOfMoney - snackPrices[snackSelection];
+		if(difference < 0) {
+			System.out.println("Not enough money :( try again later");
+		}
+		else
+			System.out.println("Your change is: " + difference);
+		
 	}
 }
